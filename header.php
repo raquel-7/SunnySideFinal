@@ -16,7 +16,6 @@
         <ul class="menu">
           <li class="menu__item"><a class="menu__link" href="index.php"><center><img src="img/home.png" width = "40px" height="40px"></center><br>HOME</a></li>
           <li class="menu__item"><a class="menu__link" href="login.php"><center><img src="img/entrar.png" width = "40px" height="40px"></center><br>LOG IN</a></li>
-          <li class="menu__item"><a class="menu__link" href=""><center><img src="img/email.png" width = "40px" height="40px"></center><br>CONTACTO</a></li>
         </ul>
       </nav>
     </div>

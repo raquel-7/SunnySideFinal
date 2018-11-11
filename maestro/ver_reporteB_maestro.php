@@ -104,6 +104,16 @@ if (!$dbconn) {
             $curso = $row1['actividad'];
             $observacion = $row1['observacion'];
             $calificacion = $row1['calificacion'];
+
+            $sql_fecha = "SELECT fecha FROM reporte WHERE idalumno = '$idalumno' AND tiporeporte='B' AND actividad = '$curso' AND observacion = '$observacion' AND calificacion = '$calificacion'";
+            $result_fecha = pg_query($dbconn, $sql_fecha);
+            if (!$result_fecha) {
+              echo "Ocurrió un error con query (Archivo: ver_reporteB.php, fecha).\n";
+              exit;
+            }
+
+            $row_fecha = pg_fetch_array($result_fecha);
+            $fecha = $row1['fecha'];
         ?>
       <tr>
         <td>
@@ -121,7 +131,7 @@ if (!$dbconn) {
               echo $calificacion;
            ?>
          </td>
-         <td><a href="modificando_reporteB.php?idalumno=<?php echo base64_encode($idalumno);?>&nombrea=<?php echo base64_encode($nombrea);?>&curso=<?php echo base64_encode($curso);?>&bimestre=<?php echo base64_encode($bimestre);?>">Modificar</a></td>
+         <td><a href="modificando_reporteB.php?idalumno=<?php echo base64_encode($idalumno);?>&nombrea=<?php echo base64_encode($nombrea);?>&curso=<?php echo base64_encode($curso);?>&bimestre=<?php echo base64_encode($bimestre);?>&fecha=<?php echo base64_encode($fecha);?>">Modificar</a></td>
       </tr>
       <?php
           }

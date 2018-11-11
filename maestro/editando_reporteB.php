@@ -44,11 +44,11 @@
 
     /*UPDATE reporte SET actividad = 'Tareas', observacion = 'lala', calificacion = 3 WHERE fecha = '16/09/2018'
     AND tiporeporte = 'D' AND idalumno ='1234' AND dpi = 3102021*/
-    $sql_update = "UPDATE reporte SET actividad = '$actividad', observacion = '$observacion', calificacion = $calificacion
-                   WHERE tiporeporte = 'B' AND idalumno ='$idalumno' AND dpi = $dpi";
+    $sql_update = "UPDATE reporte SET  observacion = '$observacion', calificacion = $calificacion
+                   WHERE tiporeporte = 'B' AND idalumno ='$idalumno' AND dpi = $dpi AND fecha = '$fecha' AND actividad = '$actividad'";
     $result3 = pg_query($dbconn, $sql_update);
     if (!$result3) {
-      echo "Ocurrió un error con query (Archivo: modificando_reporteD.php, update).\n";
+      echo "Ocurrió un error con query (Archivo: editando_reporteB.php, update).\n";
       exit;
     }
      ?>

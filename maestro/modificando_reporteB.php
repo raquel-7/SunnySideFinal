@@ -26,6 +26,7 @@ if (!$dbconn) {
     $nombrea = base64_decode($_GET['nombrea']);
     $curso = base64_decode($_GET['curso']);
     $bimestre = base64_decode($_GET['bimestre']);
+    $fecha = base64_decode($_GET['fecha']);
   ?>
   <center>
     <h2 class = "bienvenido__tutor">Editar reporte bimestral</h2>
@@ -34,7 +35,7 @@ if (!$dbconn) {
   <br>
   <form action= "editando_reporteB.php" method="post">
     <center>
-      FECHA: <input type="date" class="login-input" name="fecha" autofocus required="">
+      FECHA: <input type="date" class="login-input" name="fecha" value=<?php echo $fecha; ?> readonly>
       <br>
       ID ALUMNO: <input type="text" class="login-input" name="idalumno" value=<?php echo $idalumno; ?> readonly>
       <br>

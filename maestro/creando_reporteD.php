@@ -40,7 +40,19 @@
     $row1 = pg_fetch_array($result);
     $dpi = $row1['dpi'];
 
+    $sql_fecha = "SELECT * FROM reporte WHERE fecha = '$fechahora' AND tiporeporte = 'D' AND actividad = '$actividad' AND idalumno = '$idalumno'";
+    $result_fecha = pg_query($dbconn, $sql_fecha);
+    if (!$result_fecha) {
+      echo "Ocurrió un error con query (Archivo: creando_reporteD.php, fecha).\n";
+      exit;
+    }
 
+    $row_fecha = pg_fetch_array($result_fecha);
+    $resultado_fecha = $row_fecha['actividad'];
+
+    if(!is_null($resultado_fecha)){
+      header("Location: mensaje.php ");
+    }
 
     $sql_insert = "INSERT INTO reporte VALUES('$actividad','$observacion','$fechahora',$calificacion,'D','$idalumno',$dpi)";
     $result3 = pg_query($dbconn, $sql_insert);
