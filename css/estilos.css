@@ -1,0 +1,686 @@
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:400,500');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer;}
+.w3-badge {height:13px;width:13px;padding:0; transition: all 0.4s;}
+/****************************** LOG IN ****************************************/
+.login {
+  margin: 150px auto;
+  width: 400px;
+  padding: 30px 25px;
+  background: white;
+  border: 1px solid #c4c4c4;
+}
+
+h1.login-title {
+  font-family: Poppins-Regular, sans-serif;
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  color: #ADADAD;
+  text-align:center;
+  background: #f7f7f7;
+
+}
+h5.login-title {
+  font-family: Poppins-Regular, sans-serif;
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+  text-align:center;
+  background: white;
+
+
+}
+label.login-title{
+  font-family: Poppins-Regular, sans-serif;
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+  text-align:center;
+  background: white;
+}
+
+.login-input {
+  font-family: Poppins-Regular, sans-serif;
+  width: 285px;
+  height: 50px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+  padding-left: 50px;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+.login-input:focus {
+    border-color:#6e8095;
+    outline: none;
+  }
+
+  .login-button {
+    width: 70%;
+    height: 50px;
+    margin-left: 70px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: #f0776c;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:0;
+  }
+
+/******************************************************************************/
+/****************************** Perfiles ****************************************/
+.perfil {
+  margin: 50px auto;
+  width: 400px;
+  padding: 30px 25px;
+  background: white;
+  border: 1px solid #c4c4c4;
+}
+
+h1.perfil-title {
+  font-family: Poppins-Regular, sans-serif;
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 300;
+  color: #ADADAD;
+  text-align:center;
+  background: #f7f7f7;
+
+}
+
+h5.perfil-title {
+  font-family: Poppins-Regular, sans-serif;
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+  text-align:center;
+  background: white;
+
+
+}
+label.perfil-title{
+  font-family: Poppins-Regular, sans-serif;
+  margin: -28px -25px 25px;
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+  text-align:center;
+  background: white;
+}
+
+.perfil-input {
+  font-family: Poppins-Regular, sans-serif;
+  width: 285px;
+  height: 50px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+  padding-left: 50px;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+.perfil-input:focus {
+    border-color:#6e8095;
+    outline: none;
+  }
+
+  .perfil-button {
+    width: 70%;
+    height: 50px;
+    margin-left: 70px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: #f0776c;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:0;
+  }
+
+/******************************************************************************/
+
+  .alumno{
+    margin-top: 150px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  input.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+  }
+
+  .a-texto{
+  font-family: Poppins-Regular, sans-serif;
+  font-size: 10px;
+  }
+  .a-hiper{
+  font-family: Poppins-Regular, sans-serif;
+  font-size: 10px;
+  color:#f0776c;
+
+  }
+
+  .register-button {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: #f0776c;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:0;
+  }
+
+  .siguiente-button {
+    width: 25%;
+    height: 50px;
+    margin-left: 70px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: #f0776c;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:0;
+    margin-top: 25px;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  .opcion{
+    border-radius: 5px;
+    max-width: 100%;
+  }
+
+  body{
+    margin: 0;
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  h1{
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1.5px;
+  }
+
+  h2{
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1.5px;
+  }
+
+  h3{
+    font-family: 'Encode Sans Semi Condensed', sans-serif;
+  }
+
+  .bienvenido__tutor{
+    margin-top: 100px;
+    z-index: -1000px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 75%;
+  }
+
+  th, td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+  }
+
+  th{
+    font-family: 'Cookie', cursive;
+    font-size: 30px;
+    background-color: #5EB28F;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+  }
+
+  tr:hover {background-color:#f5f5f5;}
+
+
+  /******************************Estilos del header******************************/
+  .header{
+    height: 68px;
+  }
+
+  .header .contenedor{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo, .icon-menu{
+    margin: 5px;
+  }
+
+  .icon-menu{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #F9CCBE;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+
+  /******************************Estilos del menu******************************/
+  .nav {
+    position: absolute;
+    top: 150px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+  }
+
+  .menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu__link{
+    display: block;
+    padding: 15px;
+    background: #FFFFFF;
+    text-decoration: none;
+    color: #8C8C8C;
+  }
+
+  .menu__link:hover, .select{
+    background: #FFFFFF;
+    color: #F9CCBE;
+  }
+
+  .mostrar{
+    left: 0;
+  }
+
+  .menu li ul{
+    list-style: none;
+    display:none;
+    position:absolute;
+    min-width: 140px;
+  }
+
+  .menu li:hover > ul{
+    display: block;
+  }
+
+
+
+
+  /******************************Estilos del banner******************************/
+
+  .banner{
+    margin-top: 100px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+  }
+
+  .banner .contenedor{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner__txt{
+    display: none;
+  }
+
+
+
+  /******************************Estilos del footer******************************/
+  .footer{
+    margin-top: 200px;
+    background: #8C8C8C;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    /*position: fixed;*/
+  }
+
+  .footer .social [class^="icon-"]{
+    display: inline-block;
+    color: #8C8C8C;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+  }
+
+  .footer_tareas{
+    margin-top: 200px;
+    background: #8C8C8C;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    position: fixed;
+  }
+
+  .footer_tareas .social [class^="icon-"]{
+    display: inline-block;
+    color: #8C8C8C;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+  }
+
+
+  /******************************Estilos responsive******************************/
+   @media (min-width:480px) {
+     .logo{
+       font-size: 40px;
+     }
+
+     .banner__titulo{
+       font-size: 30px;
+       margin: 5px 0;
+     }
+
+     .banner__txt{
+       display: block;
+       font-size: 18px;
+       margin: 5px 0;
+     }
+
+  /*   .footer .social [class^="icon-"] {
+        margin: 0 10px;
+      }*/
+   }
+
+   @media (min-width:768px) {
+      .banner__titulo{
+        font-size: 50px;
+      }
+   }
+
+   @media (min-width:1024px){
+     /*.contenedor{
+       width: 1000px;
+     }*/
+     .nav{
+       position: static;
+       width: auto;
+     }
+
+     .icon-menu{
+       display: none;
+     }
+
+     .menu{
+       display: flex;
+     }
+
+     .menu__link{
+       font-size: 20px;
+     }
+
+     .banner__txt{
+       font-size: 19px;
+     }
+   }
+
+   @media (min-width:1280px){
+     .contenedor{
+       width: 1200px;
+     }
+   }
+
+/*********************** CLASIFICACION ESTRELLAS ******************************/
+#form p {
+  text-align: center;
+  font-size: 100px;
+}
+
+#form label {
+  font-size: 20px;
+}
+
+label {
+  color: grey;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.calificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  font-size: 30px;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+/*********************** GALERIA ******************************/
+
+/* Create two equal columns that floats next to each other */
+.columngaleria {
+    float: left;
+    width: 50%;
+    padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.rowgaleria:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.inputgaleria {
+  width: 285px;
+  height: 40px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+  padding-left: 50px;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+.button1galeria {
+  position: static;
+  width: 10%;
+  height: 25px;
+  padding: 0;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  background: #b62a25;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline:0;
+}
+
+a.button2galeria {
+  width: 50%;
+  height: 80px;
+  margin-left: 70px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background: #f0776c;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline:0;
+  margin-top: 25px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+/*
+.modal {
+    display: none; /* Hidden by default
+    position: fixed; /* Stay in place
+    z-index: 1; /* Sit on top
+    padding-top: 100px; /* Location of the box
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width
+    height: 100%; /* Full height
+    overflow: auto; /* Enable scroll if needed
+    background-color: rgb(0,0,0); /* Fallback color
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity
+}
+*/
+/* Modal Content (image)
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+*/
+/* Caption of Modal Image
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+*/
+/* Add Animation
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+*/
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
