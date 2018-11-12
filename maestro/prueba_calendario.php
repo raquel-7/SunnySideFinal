@@ -208,7 +208,7 @@ switch ($accion) {
               $("#mantenimientoEventos").modal();
 
             },
-              events:"http://localhost/Guarderia/maestro/datos.json",
+              events:"http://localhost/SunnySideFinal/maestro/datos.json",
 
             eventClick:function(calEvent,jsEvent,view){
               $('#btnAgregar').prop("disabled",true);

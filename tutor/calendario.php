@@ -132,7 +132,7 @@ $alumno = base64_decode($_GET['alumno']);
               $("#mantenimientoEventos").modal();
 
             },
-              events:"http://localhost/Guarderia/tutor/datos.json",
+              events:"http://localhost/SunnySideFinal/tutor/datos.json",
 
             eventClick:function(calEvent,jsEvent,view){
               $('#btnAgregar').prop("disabled",true);

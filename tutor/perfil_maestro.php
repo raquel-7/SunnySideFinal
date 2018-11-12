@@ -7,7 +7,7 @@ $dbname="SUNNYSIDE";
 $dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass");
 
 if (!$dbconn) {
-  echo "Ocurrió un error con la conxion .\n";
+  echo "Ocurrió un error con la conexion .\n";
   exit;
 }
 
@@ -90,7 +90,7 @@ if (!$dbconn) {
   </center>
   <div class="perfil">
     <h1 class="perfil-title">Maestro</h1>
-    <center><img src="img/profesor_icono.png" width = "200px" height="200px"></center>
+    <center><img src="../img/profesor_icono.png" width = "200px" height="200px"></center>
     <br>
     NOMBRE: <i class='fa fa-user-o'></i><input type="text" class="perfil-input" name="nombrep" value=<?php echo $nombrep; ?> readonly>
     <br>
