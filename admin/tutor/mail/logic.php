@@ -1,46 +1,44 @@
-<?php
 
-use PHPMailer\PHPMailer\PHPMailer;
+  <?php
 
-require 'vendor/autoload.php';
+  use PHPMailer\PHPMailer\PHPMailer;
 
-$name = "Nombre el correo";
-$emailAddr = $_GET['email'];
-$usuario = $_GET['usuario'];
+  require 'vendor/autoload.php';
 
-$comment = "<a href= \"http://localhost/Guarderia/admin/tutor/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
-$subject = "Iniciate con SunnySide ";
+  $name = "Nombre el correo";
+  $emailAddr = $_GET['email'];
+  $usuario = $_GET['usuario'];
 
-// Send mail
-$mail = new PHPMailer();
-$mail->IsSMTP(); // telling the class to use SMTP
+  $comment = "<a href= \"http://localhost:81/Guarderia/admin/tutor/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
+  $subject = "Iniciate con SunnySide ";
 
-// Tus credenciales de mailtrap o gmail
-$mail->SMTPAuth = true;            // enable SMTP authentication
-$mail->Host = "smtp.gmail.com"; // SMTP server
-$mail->Username = "ssunnyside2018@gmail.com";
-$mail->Password = "sunnyside123";
-$mail->Port = 587; // cambiar por el puerto de smtp de gmail
+  // Send mail
+  $mail = new PHPMailer();
+  $mail->IsSMTP(); // telling the class to use SMTP
 
-$mail->From = "ssunnyside2018@gmail.com";
-$mail->FromName = "SunnySide";
-$mail->Subject = $subject;
-$mail->MsgHTML("<h1>".$comment."<br />");
-$mail->AddAddress($emailAddr, $name);
+  // Tus credenciales de mailtrap o gmail
+  $mail->SMTPAuth = true;            // enable SMTP authentication
+  $mail->Host = "smtp.gmail.com"; // SMTP server
+  $mail->Username = "ssunnyside2018@gmail.com";
+  $mail->Password = "sunnyside123";
+  $mail->Port = 587; // cambiar por el puerto de smtp de gmail
 
-//$mail->AddAttachment("images/phpmailer.gif");             // attachment
+  $mail->From = "ssunnyside2018@gmail.com";
+  $mail->FromName = "SunnySide";
+  $mail->Subject = $subject;
+  $mail->MsgHTML("<h1>".$comment."<br />");
+  $mail->AddAddress($emailAddr, $name);
 
-$response= NULL;
-if(!$mail->Send()) {
-    $response = "Mailer Error: " . $mail->ErrorInfo;
-} else {
-    $response = "Message sent!";
+  //$mail->AddAttachment("images/phpmailer.gif");             // attachment
 
-            header("Location: ../../index.php ");
-}
+  $response= NULL;
+  if(!$mail->Send()) {
+      $response = "Mailer Error: " . $mail->ErrorInfo;
+  } else {
+      $response = "Message sent!";
+  }
 
-$output = json_encode(array("response" => $response));
-header('content-type: application/json; charset=utf-8');
-
-echo($output);
-?>
+  $output = json_encode(array("response" => $response));
+  header("Location: ../../index.php");
+  echo($output);
+  ?>

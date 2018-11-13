@@ -1,0 +1,193 @@
+*,
+*:before,
+*:after {
+ @include box-sizing(border-box);
+}
+
+
+html, body {
+background: white;
+font-family: 'Merriweather', sans-serif;
+padding: 2em;
+}
+
+h1 {
+ text-align: center;
+ color: #c06e6e;
+}
+
+form {
+
+
+   font-family: 'Merriweather', sans-serif;
+   resize: none;
+
+}
+
+#input-submit {
+   color: white;
+   background: $red;
+   cursor: pointer;
+}
+
+textarea {
+    height: 126px;
+    width: 300px;
+}
+}
+
+
+.half {
+float: left;
+width: 48%;
+margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+   margin-right: 2%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 350px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.input {
+  width: 285px;
+  height: 40px;
+  margin-bottom: 25px;
+  margin-left: 30px;
+  padding-left: 50px;
+  font-size: 15px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+.button1 {
+  position: static;
+  width: 10%;
+  height: 25px;
+  padding: 0;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  background: #b62a25;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline:0;
+}
+
+.button2 {
+  position: static;
+  width: 10%;
+  height: 25px;
+  padding: 0;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  background:  #009925;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  outline:0;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.select {
+  border: 1px solid #ccc;
+  width: 140px;
+  overflow: hidden;
+}
+  .select select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+  }
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+
+
+  border-bottom: 1px solid #ddd;
+
+}
+
+
+tr:hover {background-color:#ffdada;}

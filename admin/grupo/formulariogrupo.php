@@ -1,77 +1,66 @@
- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<!DOCTYPE html>
-<html>
+
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>SunnySide</title>
+  <meta name="viewport" content="width=device=width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://file.myfontastic.com/T7nMioqYzUpynQCWqZ2uDE/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <style>
+<?php include '../../css/estilos.css';
+include '../maestro/tool.css';
+include '../maestro/this.css'; ?>
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:400,500');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 
-<?php
-include '../../css/estilos.css';
- ?>
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
-input[type=submit] {
-    width: 100%;
-    background-color: #ff8c8c;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
-input[type=submit]:hover {
-    background-color: #f69f9f;
-}
-
-div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
 </style>
+<header>
+  <?php
+include '../maestro/header-admin.php';
 
+//UPDATE usuarios SET contraseña = 'contrasena1' WHERE username = 'nombre' AND email = 'nombre@gmail.com';
+
+   ?>
+</header>
 <body>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="rowgaleria" >
+    <div class="columngaleria"style="background-color:white;" align=center;>
 
 
-<div>
-  <?php
-  session_start();
+          <form action="formularioscript.php" method="post" enctype="multipart/form-data">
 
-  $host="localhost";
-  $user="postgres";
-  $pass="123abc";
-  $dbname="SUNNYSIDE";
-  $dbconn = pg_connect("host=$host dbname=$dbname user=$user password=$pass");
+        <h1 align='center'>Crear Grupo</h1>
+                  <br> <br> <label>Nombre de grupo:</label>
+                      <input class="login-input" type="text"  name="nombreGrupo"><br>
 
-  if (!$dbconn) {
-    echo "Ocurrió un error con la conexion .\n";
-    exit;
-  }
-  $nombre = $_GET['username'];
-  $email = $_GET['email'];   ?>
-  <form action="formularioscript.php" method="post" enctype="multipart/form-data">
-    <div class="rowgaleria" >
 
-        <h1>  <a href="../index.php" class="logo"><img src="../../img/SunnySide-icon.png" width = "15%" ></a>
-Crear Grupo</h1>
-          <br> <br> <label>Nombre de grupo:</label>
-              <input type="text"  name="nombreGrupo"><br>
-
-          </div>
-      <input type="submit" class="siguiente-button" value="Agregar" name="submit">
-  </form>
-
+              <input type="submit" class="siguiente-button" value="Agregar" name="submit">
+          </form>
+    </div>
+    <div class="columngaleria"  style="background-color:white;">
+        <h1 align= "center">Lista de Grupos</h1>
+      <?php
+      include 'function.php';
+      displayTable("grupo");
+      ?>
+    </div>
+  </div>
+  <script src="../../js/menu.js"></script>
 </body>
+
 
 </html>

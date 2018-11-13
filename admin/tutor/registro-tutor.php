@@ -22,7 +22,7 @@
     $email = $_GET['email'];
     $contrasena = $_GET['contrasena'];
 
-    $query = "UPDATE usuarios SET contraseña = '$contrasena' WHERE email = '$email'";
+    $query = "UPDATE usuarios SET contrasena = '$contrasena' WHERE email = '$email'";
     $send = pg_query($dbconn, $query);
     if(!$send){
       echo "Error al enviar campos";

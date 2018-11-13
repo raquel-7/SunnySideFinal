@@ -24,6 +24,15 @@
     $query = "INSERT INTO alumno (nombrea, idalumno, fechanac, dpi, nombregrupo) VALUES('$nombreAlumno', '$idalumno', '$fecha', $dpi, '$grupo')";
 
     $send = pg_query($dbconn, $query);
+    $query2 = "SELECT cantidad FROM grupo WHERE nombregrupo = '$grupo'";
+    $send2 = pg_query($dbconn, $query2);
+      while ($row = pg_fetch_assoc($send2)){
+            $cantidad = $row['cantidad'];
+            $cantidad = $cantidad + 1;
+            $query3 = "UPDATE grupo SET cantidad = '$cantidad' WHERE nombregrupo = '$grupo'";
+            $send3 =  pg_query($dbconn, $query3);
+
+      }
 
 
 

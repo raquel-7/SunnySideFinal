@@ -8,7 +8,7 @@ $name = "Nombre el correo";
 $emailAddr = $_GET['email'];
 $usuario = $_GET['usuario'];
 
-$comment = "<a href= \"http://localhost/Guarderia/admin/maestro/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
+$comment = "<a href= \"http://localhost:81/Guarderia/admin/maestro/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
 $subject = "Iniciate con SunnySide ";
 
 // Send mail
@@ -35,11 +35,9 @@ if(!$mail->Send()) {
     $response = "Mailer Error: " . $mail->ErrorInfo;
 } else {
     $response = "Message sent!";
-
-        header("Location: ../../index.php ");
 }
 
 $output = json_encode(array("response" => $response));
-header('content-type: application/json; charset=utf-8');
+header("Location: ../../index.php");
 echo($output);
 ?>

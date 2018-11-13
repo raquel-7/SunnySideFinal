@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <div class="contenedor">
-      <a href="../tutor/index.php" class="logo"><img src="../img/SunnySide-icon.png" width = "40%" ></a>
+      <a href="index.php" class="logo"><img src="../img/SunnySide-icon.png" width = "40%" ></a>
       <span class="icon-menu" id="btn-menu"></span>
       <nav class="nav" id="nav">
         <ul class="menu">

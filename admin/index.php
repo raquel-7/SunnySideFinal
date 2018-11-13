@@ -26,13 +26,6 @@ if (!$dbconn) {
       <p class= "banner__txt">La mejor aplicación web para gestión de guarderías y preescolares</p>
     </div>
   </div>
-  <footer class = "footer">
-    <div class="social">
-      <a href="https://www.facebook.com/" class="icon-facebook"></a>
-      <a href="https://twitter.com/" class="icon-twitter"></a>
-      <a href="https://www.instagram.com/" class="icon-instagram"></a>
-    </div>
-    <p class="copy">&copy; SunnySide 2018 - Todos los derechos reservados</p>
-  </footer>
+
 </body>
 </html>

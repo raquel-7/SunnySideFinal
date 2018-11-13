@@ -30,7 +30,7 @@
                 $insertarUsuario = "INSERT INTO usuarios (username, email) VALUES ('$uuser','$email')";
                 $result = pg_query($dbconn, $insertarUsuario);
                 echo $email;
-                echo "<script type='text/javascript'> window.open('http://localhost/Guarderia/admin/tutor/mail/logic.php?email=$email&usuario=$uuser','_self');</script>";
+                echo "<script type='text/javascript'> window.open('http://localhost:81/Guarderia/admin/tutor/mail/logic.php?email=$email&usuario=$uuser','_self');</script>";
 
             }
             ?>
