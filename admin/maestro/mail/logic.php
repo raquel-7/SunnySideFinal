@@ -8,7 +8,7 @@ $name = "Nombre el correo";
 $emailAddr = $_GET['email'];
 $usuario = $_GET['usuario'];
 
-$comment = "<a href= \"http://localhost:81/Guarderia/admin/maestro/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
+$comment = "<a href= \"http://localhost/SunnySideFinal/admin/maestro/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
 $subject = "Iniciate con SunnySide ";
 
 // Send mail
