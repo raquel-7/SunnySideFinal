@@ -10,6 +10,7 @@ if (!$dbconn) {
   echo "Ocurrió un error con la conxion .\n";
   exit;
 }
+session_start();
 
 ?>
 <html>
@@ -17,11 +18,7 @@ if (!$dbconn) {
 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
 
-<head><title>liveVid</title></head>
-<?php
-  $nalumno = base64_decode($_GET['nombre']);
-  $alumno = base64_decode($_GET['alumno']);
-?>
+<head><title>Subir Foto</title></head>
 <header class="header">
   <div class="contenedor">
     <a href="alumno.php?alumno=<?php echo base64_encode($alumno);?>&nombre=<?php echo base64_encode($nalumno);?>" class="logo"><img src="../img/small-icon.png" width = "200px" height="150px"></a>
@@ -53,15 +50,30 @@ include 'header_maestro.php';
 </style>
 <body>
 
-  <h1 style=" text-align: center; margin-top:100px;">Video en vivo</h1>
-  <form enctype="multipart/form-data" action="subirVideo.php" method="GET">
-<div class="rowgaleria"  >
+  <h1 style=" text-align: center; margin-top:100px;">Video En vivo</h1>
+  <a href="https://www.youtube.com/channel/UCSqESuyUJD0n8MVdpGlovQw?view_as=subscriber" style="margin-left:45%" ><img src="../img/tv.png" alt="Ir a video en vivo" title="Ver Lista de Videos"></a>
 
-<iframe width="85%" height="85%" style="margin-left:10%"
-src="https://www.youtube.com/embed/12CU9xUvPOg">
-</iframe>
+<div class="rowgaleria"  >
+  <?php
+  if(isset($_SESSION['video'])) {
+    $token = ltrim($_SESSION['video'],'https://youtu.be/');
+    $link = "https://www.youtube.com/embed/$token";
+
+    ?>
+
+    <iframe width="85%" height="85%" style="margin-left:10%"
+    src="<?php echo $link; ?>"  frameborder="0" allowfullscreen>
+    <?php
+
+  }else{
+    ?>
+    <iframe width="85%" height="85%" style="margin-left:10%"
+    src="https://www.youtube.com/embed/1roy4o4tqQM" frameborder="0" allowfullscreen>
+    <?php
+  }
+   ?>
 </div>
-  </form>
+
 </body>
 <script src="../js/menu.js"></script>
 <script>
