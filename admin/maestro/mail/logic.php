@@ -35,11 +35,9 @@ if(!$mail->Send()) {
     $response = "Mailer Error: " . $mail->ErrorInfo;
 } else {
     $response = "Message sent!";
-
-        header("Location: ../../index.php ");
 }
 
 $output = json_encode(array("response" => $response));
-header('content-type: application/json; charset=utf-8');
+header("Location: ../../index.php");
 echo($output);
 ?>

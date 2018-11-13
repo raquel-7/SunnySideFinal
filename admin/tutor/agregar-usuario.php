@@ -301,15 +301,17 @@ h3{
 </style>
 <body>
 
-<br>
-<br>
-<br>
-<br>
+
 <?php
 $email = $_GET['email'];
 $userr = $_GET['usuario'];
+include 'header-admin.php';
  ?>
+<<<<<<< HEAD
+
+=======
  <a href="../index.php" class="logo"><img src="../../img/SunnySide-icon.png" width = "15%" ></a>
+>>>>>>> 795c29b81d7b94e8b2e51f9949ba09cdb32cc9d9
    <form class="login" action= "registro-tutor.php?email=<?php echo $email; ?>&username=<?php echo $userr; ?>" method="get">
        <h5 class="login-title">Crea un cuenta</h5>
        <label class="login-title">Nombre:</label>

@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device=width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
   <link href="https://file.myfontastic.com/T7nMioqYzUpynQCWqZ2uDE/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
+<?php include '../../css/estilos.css';
+include 'tool.css'; ?>
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Condensed:400,500');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
@@ -58,8 +61,8 @@
   }
 
   .login-input {
-    width: 285px;
-    height: 50px;
+    width: 90%;
+    height: 50px
     margin-bottom: 25px;
     margin-left: 30px;
     padding-left: 30px;
@@ -75,13 +78,13 @@
       outline: none;
     }
   .login-button {
-    width: 100%;
+    width: 50%;
     height: 50px;
     padding: 0;
     font-size: 20px;
     color: #fff;
     text-align: center;
-    background: #e9dafd;
+    background: #f36e27;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
@@ -299,27 +302,47 @@ h3{
    }
  }
 </style>
-<body>
+<header>
   <?php
 include 'header-admin.php';
+
 //UPDATE usuarios SET contraseña = 'contrasena1' WHERE username = 'nombre' AND email = 'nombre@gmail.com';
 
    ?>
-<br>
-<br>
-<br>
-<br>
-   <form class="login" action= "agregarTutor.php" method="post">
-       <h5 class="login-title">Crea un cuenta</h5>
-       <label class="login-title">Dirección de correo electrónico:</label>
-       <input type="text" name="email" class="login-input"><br>
-       <label class="login-title">usuario:</label>
-       <input type="text" name="loginname" readonly id="loginname" />
+</header>
+<body>
 
-    <button type="submit" class = "login-button">Enviar</button>
-   </form>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="js/menu.js"></script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <div class="rowgaleria" >
+    <div class="columngaleria"style="background-color:white;" align=center;>
+
+          <div class="tooltip" ><h1 align= "center">Enviar Correo electrónico a Padre/Madre/Encargado</h1>
+            <span class="tooltiptext">Esta función es para <br> agragar a un nuevo Padre/Madre/Encargado</span>
+          </div>
+
+         <form class="login" action= "agregarTutor.php" method="post">
+             <h5 class="login-title">Crea un cuenta</h5><i style="font-size:24px" class="fa">&#xf05a;</i>
+             <label class="login-title">Dirección de correo electrónico:</label><br>
+             <input type="text" name="email" class="login-input"><br>
+          <button type="submit" class = "login-button">Enviar</button>
+         </form>
+    </div>
+    <div class="columngaleria"  style="background-color:white;">
+        <h1 align= "center">Lista de Padre/Madre/Encargado</h1>
+      <?php
+      include 'function.php';
+      displayTable("tutor");
+      ?>
+    </div>
+  </div>
+  <script src="../../js/menu.js"></script>
 </body>
 <script>
 $(document).on('change','#email',function(){

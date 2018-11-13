@@ -301,18 +301,18 @@ h3{
 </style>
 <body>
 
-<br>
-<br>
-<br>
-<br>
 <?php
 
 
 $email = $_GET['email'];
 $userr = $_GET['usuario'];
+include 'header-admin.php';
  ?>
 
+<<<<<<< HEAD
+=======
   <a href="../index.php" class="logo"><img src="../../img/SunnySide-icon.png" width = "15%" ></a> 
+>>>>>>> 795c29b81d7b94e8b2e51f9949ba09cdb32cc9d9
    <form class="login" action= "registro-maestro.php?email=<?php echo $email; ?>&username=<?php echo $userr; ?>" method="get">
        <h5 class="login-title">Crea un cuenta</h5>
        <label class="login-title">Nombre:</label>
@@ -321,12 +321,12 @@ $userr = $_GET['usuario'];
        <input type="text" value = "<?php echo $email;?>" class="login-input" readonly ><br>
        <label class="login-title">Contraseña:</label>
        <input type="password" name="contrasena" class="login-input"><br>
-        <input type="hidden" name="email" value="<?php echo $email ?>" class="login-input"><br>
-        <input type="hidden" name="usuario" value="<?php echo $userr ?>" class="login-input"><br>
+        <input type="hidden" name="email" value="<?php echo $email; ?>" class="login-input"><br>
+        <input type="hidden" name="usuario" value="<?php echo $userr; ?>" class="login-input"><br>
     <button type="submit" class = "login-button">Siguiente</button>
    </form>
 
 
-  <script src="js/menu.js"></script>
+  <script src="../../js/menu.js"></script>
 </body>
 </html>

@@ -8,7 +8,11 @@ $name = "Nombre el correo";
 $emailAddr = $_GET['email'];
 $usuario = $_GET['usuario'];
 
-$comment = "<a href= \"http://localhost/Guarderia/admin/tutor/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
+<<<<<<< HEAD
+$comment = "<a href= \"http://localhost:81/SunnySideFinal/admin/tutor/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
+=======
+$comment = "<a href= \"http://localhost/SunnySideFinal/admin/tutor/agregar-usuario.php?email=$emailAddr&usuario=$usuario\">ingresa a Sunnyside </a><p>";
+>>>>>>> 795c29b81d7b94e8b2e51f9949ba09cdb32cc9d9
 $subject = "Iniciate con SunnySide ";
 
 // Send mail
@@ -35,6 +39,12 @@ if(!$mail->Send()) {
     $response = "Mailer Error: " . $mail->ErrorInfo;
 } else {
     $response = "Message sent!";
+<<<<<<< HEAD
+}
+
+$output = json_encode(array("response" => $response));
+header("Location: ../../index.php");
+=======
 
             header("Location: ../../index.php ");
 }
@@ -42,5 +52,6 @@ if(!$mail->Send()) {
 $output = json_encode(array("response" => $response));
 header('content-type: application/json; charset=utf-8');
 
+>>>>>>> 795c29b81d7b94e8b2e51f9949ba09cdb32cc9d9
 echo($output);
 ?>

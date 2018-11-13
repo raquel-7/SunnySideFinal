@@ -6,6 +6,7 @@
 
 <?php
 include '../../css/estilos.css';
+include '../maestro/tool.css';
  ?>
 input[type=text], select {
     width: 100%;
@@ -18,11 +19,11 @@ input[type=text], select {
 }
 
 input[type=submit] {
-    width: 100%;
+    width: 50%;
+    margin-left: 20%;
     background-color: #ff8c8c;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -34,11 +35,14 @@ input[type=submit]:hover {
 
 div {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:white;
     padding: 20px;
 }
 </style>
+<header>
 
+<?php include '../maestro/header-admin.php'; ?>
+</header>
 <body>
 
 
@@ -59,10 +63,19 @@ div {
   }
   $nombre = $_GET['username'];
   $email = $_GET['email'];   ?>
+
+
+    <h1 align ="center"> Formulario Alumno</h1>
+<a  style="margin-left:80%;" href="listado.php"><img class="tooltip" src="../../img/teddy-bear.png" alt="Ver Listado de Alumnos"> </a>
+
+
+    <br>
+    <br>
+    <br>
   <form action="formularioscript.php" method="post" enctype="multipart/form-data">
     <div class="rowgaleria" >
       <div class="columngaleria"style="background-color:white;" align=center;>
-        <h1>  <a href="../index.php" class="logo"><img src="../../img/SunnySide-icon.png" width = "15%" ></a>Formulario Alumno</h1>
+
           <br>  <label>Año Escolar:</label>
             <select name="anio">
               <?php
