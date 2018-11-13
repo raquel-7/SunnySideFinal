@@ -24,7 +24,7 @@
           header('Location: admin/index.php');
 
     }
-    $sql = "SELECT * FROM usuarios WHERE username = '$usuario' AND contraseña = '$passw'";
+    $sql = "SELECT * FROM usuarios WHERE username = '$usuario' AND contrasena = '$passw'";
     print_r($r);
    $r = pg_query($dbconn, $sql);
     if (!$r) {
